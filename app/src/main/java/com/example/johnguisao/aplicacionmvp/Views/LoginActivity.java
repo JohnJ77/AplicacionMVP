@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityVie
 
     @Override
     public void navigateToHome() {
-        //startActivity(new Intent(LoginActivity.this,));
+        startActivity(new Intent(LoginActivity.this, PrincipalMenuActivity.class));
     }
 
     public void validate() {

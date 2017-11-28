@@ -3,6 +3,7 @@ package com.example.johnguisao.aplicacionmvp.Presenters;
 import com.example.johnguisao.aplicacionmvp.Interactors.LoginActivityInteractorImpl;
 import com.example.johnguisao.aplicacionmvp.Interfaces.LoginActivityInteractor;
 import com.example.johnguisao.aplicacionmvp.Interfaces.LoginActivityPresenter;
+import com.example.johnguisao.aplicacionmvp.Interfaces.LoginActivityView;
 import com.example.johnguisao.aplicacionmvp.Interfaces.OnLoginActivityFinishListener;
 import com.example.johnguisao.aplicacionmvp.Views.LoginActivity;
 
@@ -11,10 +12,10 @@ import com.example.johnguisao.aplicacionmvp.Views.LoginActivity;
  */
 
 public class LoginActivityPresenterImpl implements LoginActivityPresenter, OnLoginActivityFinishListener {
-    private LoginActivity viewLoginActivity;
+    private LoginActivityView viewLoginActivity;
     private LoginActivityInteractor interactorLoginActivity;
 
-    public LoginActivityPresenterImpl(LoginActivity viewLoginActivity) {
+    public LoginActivityPresenterImpl(LoginActivityView viewLoginActivity) {
         this.viewLoginActivity = viewLoginActivity;
         interactorLoginActivity = new LoginActivityInteractorImpl();
     }
